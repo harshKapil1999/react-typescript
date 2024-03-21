@@ -3,6 +3,7 @@ import Counter from "./components/Counter"
 import Heading from "./components/Heading"
 import Section from "./components/Section"
 import SecondCounter from "./components/SecondCounter";
+import List from "./components/List";
 
 function App() {
   const [count, setCount] = useState<number>(0);
@@ -13,6 +14,7 @@ function App() {
       <Section title="Welcome To React-Typescript">In this Project we will impliment React and Typescript together</Section>
       <Counter />
       <SecondCounter setCount={setCount}>Count is {count}</SecondCounter>
+      <List items={["Ram", "Shyam", "Sam", "John", "Tom", "James"]} render={(item) => <span>{item}</span>} />
     </div>
   )
 }
